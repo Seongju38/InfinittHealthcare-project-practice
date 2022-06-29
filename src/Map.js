@@ -77,11 +77,29 @@ function Map() {
   }, []);
 
   return (
-    <div
-      className="map"
-      id="map"
-      style={{ width: "auto", height: "900px" }}
-    ></div>
+    <div id="mapwrap">
+      <div
+        className="map"
+        id="map"
+        style={{ width: "auto", height: "900px" }}
+      ></div>
+      <div class="category">
+        <ul>
+          <li id="coffeeMenu" onclick="changeMarker('coffee')">
+            <span class="ico_comm ico_coffee"></span>
+            커피숍
+          </li>
+          <li id="storeMenu" onclick="changeMarker('store')">
+            <span class="ico_comm ico_store"></span>
+            편의점
+          </li>
+          <li id="carparkMenu" onclick="changeMarker('carpark')">
+            <span class="ico_comm ico_carpark"></span>
+            주차장
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
